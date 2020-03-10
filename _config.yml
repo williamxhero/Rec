@@ -4,12 +4,12 @@
 
 # Site
 title: Hero Rec
-subtitle: ''
-description: ''
-keywords:
+subtitle: think
+description: 看到的，听到的，体会到的，学到的，用到的，收获到的。
+keywords: ''
 author: Will Hero
-language: ch
-timezone: ''
+language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -98,4 +98,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/williamxhero/williamxhero.github.io.git
+  branch: master 
