@@ -21,6 +21,7 @@
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-pandoc": "^0.3.0",
     "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0"
+    "hexo-server": "^1.0.0",
+    "hexo-unique-post-path": "^1.0.4"
   }
 }
