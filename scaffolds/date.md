@@ -2,7 +2,7 @@
 title: {{ title }}
 date: {{ date }}
 tags:
-mathjax: false
 categories:
-- 随记
+- 日期记录
+mathjax: false
 ---
