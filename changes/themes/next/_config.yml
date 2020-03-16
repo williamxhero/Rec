@@ -5,7 +5,7 @@
 
 # If false, merge configs from `_data/next.yml` into default configuration (rewrite).
 # If true, will fully override default configuration by options from `_data/next.yml` (override). Only for NexT settings.
-# And if true, all config from default NexT `_config.yml` have to be copied into `next.yml`. Use if you know what you are doing.
+# And if true, all config from default NexT `_config.yml` must be copied into `next.yml`. Use if you know what you are doing.
 # Useful if you want to comment some options from NexT `_config.yml` by `next.yml` without editing default config.
 override: false
 
@@ -49,7 +49,7 @@ favicon:
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  #since: 2015
+  since: 2020.3
 
   # Icon between year and copyright info.
   icon:
@@ -125,7 +125,7 @@ darkmode: false
 menu:
   home: / || home
   about: /about/ || user
-  tags: /tags/ || tags
+  #tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
@@ -459,10 +459,15 @@ font:
 # ---------------------------------------------------------------
 
 # Disable Baidu transformation on mobile devices.
-disable_baidu_transformation: false
+disable_baidu_transformation: true
+
+# Set a canonical link tag for your Hexo site.
+# See: https://support.google.com/webmasters/answer/139066
+# Remember to set up your URL in Hexo `_config.yml` (e.g. url: http://yoursite.com)
+canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, site-subtitle will be added to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
@@ -488,13 +493,12 @@ yandex_site_verification:
 baidu_site_verification:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
+baidu_push: true
 
 
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
 # See: https://theme-next.org/docs/third-party-services/
-# More plugins: https://github.com/theme-next/awesome-next
 # You may need to install dependencies or set CDN URLs in `vendors`
 # There are two different CDN providers by default:
 #   - jsDelivr (cdn.jsdelivr.net), works everywhere even in China
@@ -542,7 +546,6 @@ lazyload: false
 pangu: false
 
 # Quicklink Support
-# Do not enable both `pjax` and `quicklink`.
 # For more information: https://github.com/GoogleChromeLabs/quicklink
 # Front-matter (unsupport home archive).
 quicklink:
@@ -809,9 +812,10 @@ tabs:
     tabs: false
     labels: true
 
-# PDF tag
-# NexT will try to load pdf files natively, if failed, pdf.js will be used.
-# So, you have to install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
+# PDF tag, requires two plugins: pdfObject and pdf.js
+# pdfObject will try to load pdf files natively, if failed, pdf.js will be used.
+# The following `cdn` setting is only for pdfObject, because cdn for pdf.js might be blocked by CORS policy.
+# So, you must install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
 # See: https://github.com/theme-next/theme-next-pdf
 pdf:
   enable: false
@@ -832,7 +836,7 @@ mermaid:
 # Use velocity to animate everything.
 # For more information: http://velocityjs.org
 motion:
-  enable: true
+  enable: false
   async: false
   transition:
     # Transition variants:
@@ -853,7 +857,7 @@ motion:
 # Dependencies: https://github.com/theme-next/theme-next-pace
 # For more information: https://github.com/HubSpot/pace
 pace:
-  enable: false
+  enable: true
   # Themes list:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
@@ -964,6 +968,11 @@ vendors:
   # instant_search: //cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js
   algolia_search:
   instant_search:
+
+  # PDF
+  # pdfobject: //cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js
+  # pdfobject: //cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js
+  pdfobject:
 
   # Mermaid
   # mermaid: //cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js
