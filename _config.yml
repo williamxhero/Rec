@@ -103,3 +103,6 @@ deploy:
   type: git
   repo: https://github.com/williamxhero/williamxhero.github.io.git
   branch: master 
+
+flowchart:
+  options:

@@ -8,7 +8,7 @@ tags:
 ---
 
 ---
-## install basic 
+# install basic 
 ```
 install node.js
 npm install -g hexo-cli
@@ -16,19 +16,21 @@ install pandoc
 ```
 
 ---
-如果是从git pull下来的老项目：
+# 如果是从git pull下来的老项目：
 
 ```
 npm install
 ```
 ---
-如果是新建项目：
+# 如果是新建项目：
 
 ```
 hexo init
 npm install hexo-deployer-git --save
 npm uninstall hexo-renderer-marked --save
 npm install hexo-renderer-pandoc --save
+npm install hexo-filter-mermaid-diagrams --save 
+npm install hexo-filter-flowchart --save 
 ```
 
 ## NexT
